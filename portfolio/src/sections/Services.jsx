@@ -30,7 +30,7 @@ export default function Services() {
                   <span className="font-display italic" style={{ color: "var(--color-brass)" }}>
                     Launch pricing
                   </span>
-                  &nbsp;— reduced rates, available for a limited 6-month window.
+                  &nbsp; reduced rates, available for a limited 6-month window.
                 </p>
               </div>
             </Reveal>
