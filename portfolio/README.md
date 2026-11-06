@@ -22,4 +22,4 @@ See `docs/assets.md` for generated-art prompt and provenance. Product captures a
 
 ## Verification
 
-Production build and whitespace checks pass. Browser checks cover company routes, loaded imagery, pricing selection, contact copy fallback and project dialog Escape/focus restoration. Responsive breakpoint override was unavailable in the connected Chrome session, so physical-device/mobile viewport verification remains outstanding.
+Production build and whitespace checks pass. Browser checks cover company routes, loaded imagery, pricing selection, contact copy fallback and project dialog Escape/focus restoration. The refreshed archive was visually reviewed at desktop width and a 390px mobile viewport. Gallery filters, mobile menu expansion/Escape, image loading and horizontal overflow checks pass. Physical-device verification is separate from browser viewport checks.
