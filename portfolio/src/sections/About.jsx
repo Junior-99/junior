@@ -8,7 +8,7 @@ export default function About() {
       <div className="container-xl">
         <SectionHeading
           label="Who I am"
-          title="A builder who happens to write code for a living."
+          title="Engineering, product and a little storytelling."
         />
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-x-6">

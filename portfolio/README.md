@@ -1,49 +1,25 @@
-# Theophilus Mensah Portfolio
+# Theophilus Mensah portfolio
 
-A personal portfolio site built with React, Vite and Tailwind CSS.
+React, Vite and Tailwind website. Production: https://juniornerdking.vercel.app/
 
-## Getting started
+## Development
 
-```bash
-npm install
-npm run dev       # local dev server
-npm run build     # production build → dist/
-npm run preview   # preview the production build locally
-```
+Run `npm install`, then `npm run dev`. `npm run build` creates `dist/`.
+Vercel builds the project from this subdirectory. `vercel.json` supplies SPA route fallback.
 
-Requires Node.js 18+.
+## Content and interactions
 
-## Project structure
+FlipMall and NerdSpace lead the product showcase. The portfolio also includes Argus, Campus Buddy, EasyPay and ten independent website concepts. Concepts are identified as self-initiated demonstrations, not commissioned client work. NerdSpace is described as in release preparation; EasyPay is a simulator.
 
-```
-src/
-  data/content.js      ← ALL site copy, links, pricing and project facts live here.
-                          Edit this one file to update almost anything on the site.
-  sections/             One component per page section (Hero, About, Skills, Projects,
-                          Services, Ideas, Journey, Contact)
-  components/            Shared building blocks (Nav, Footer, cards, modal, etc.)
-  assets/                Images
-```
+Public social links were checked against https://github.com/Junior-99 and its profile README on 6 November 2026.
+Contact forms validate required fields and prepare email drafts. Visitors must send the draft themselves; there is no hosted form delivery backend. Copy details and direct WhatsApp/email provide alternatives. The profile download is a factual plain-text professional summary, not an invented employment history.
 
-## Things still to add (marked as TODO in `src/data/content.js`)
+Project/founder dialogs support keyboard close, focus containment/restoration and scroll locking. Price selectors, notes disclosures, navigation and concept galleries are interactive. Motion preferences and visible focus are supported.
 
-- **Email address** `CONTACT_EMAIL` is a placeholder. Replace it with your real
-  email so the contact form and mailto links work.
-- **WhatsApp number** `WHATSAPP_NUMBER` is empty, so the WhatsApp link is
-  currently hidden. Add a number (international format, digits only) to show it.
-- **CV / resume file** drop a PDF into `public/` (e.g. `public/cv.pdf`) and wire
-  the "Download CV" button in `src/sections/Contact.jsx` to link to it directly
-  instead of showing the "coming soon" notice.
-- **Project screenshots** add images to `src/assets/projects/flipmall/` and
-  `src/assets/projects/argus/`, import them in `src/data/content.js` under each
-  project's `images` array, and swap the `ProjectPlaceholder` component for an
-  actual `<img>` once you have them.
-- **Live links** `FlipMall` and `Argus`'s `links.live` / `links.github` fields
-  are empty until you provide real URLs.
-- **Journey / timeline dates** only durable, ongoing milestones are listed for
-  now. Add earlier history (education, first project, etc.) with real dates.
+## Assets
 
-## Deploying
+See `docs/assets.md` for generated-art prompt and provenance. Product captures and generated artwork have distinct descriptions. Private application source and user data are not published.
 
-The site is a static build `npm run build` outputs a `dist/` folder that can be
-deployed to Vercel, Netlify, GitHub Pages, or any static host.
+## Verification
+
+Production build and whitespace checks pass. Browser checks cover company routes, loaded imagery, pricing selection, contact copy fallback and project dialog Escape/focus restoration. Responsive breakpoint override was unavailable in the connected Chrome session, so physical-device/mobile viewport verification remains outstanding.

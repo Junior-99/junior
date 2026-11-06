@@ -1,0 +1,1 @@
+{"rewrites":[{"source":"/((?!assets/|projects/|favicon|theophilus-mensah-profile.txt).*)","destination":"/index.html"}]}

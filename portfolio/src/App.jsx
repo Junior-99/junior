@@ -12,8 +12,9 @@ import Contact from "./sections/Contact";
 function App() {
   return (
     <div style={{ background: "var(--color-ink)" }}>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav />
-      <main>
+      <main id="main-content">
         <Hero />
         <About />
         <Skills />

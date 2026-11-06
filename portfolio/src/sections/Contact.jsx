@@ -11,6 +11,7 @@ const inputStyle = {
 };
 
 export default function Contact() {
+  const [copyStatus,setCopyStatus]=useState('')
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -19,7 +20,7 @@ export default function Contact() {
     budget: services.budgetRanges[0],
     description: "",
   });
-  const [cvNotice, setCvNotice] = useState(false);
+
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
@@ -38,7 +39,7 @@ export default function Contact() {
         <SectionHeading
           label="Let's build"
           title="Have a project in mind?"
-          description="Websites, applications, e-commerce, dashboards, AI solutions or something custom tell me what you're building."
+          description="Websites, applications, e-commerce, dashboards, AI solutions or something custom. Tell me what you're building."
         />
 
         <div className="grid grid-cols-12 gap-y-12 md:gap-x-6">
@@ -46,13 +47,13 @@ export default function Contact() {
 
           <div className="col-span-12 md:col-span-5">
             <Reveal>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5"><p className="text-sm" style={{opacity:0.8}}>This prepares a draft in your email app. Review it and press Send there. You can also copy the details and email them directly.</p>
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs" style={{ color: "var(--color-mist-dim)" }}>Name</label>
                     <input
                       required
-                      value={form.name}
+                      aria-label="Name" value={form.name}
                       onChange={update("name")}
                       className="border px-3.5 py-2.5 text-sm outline-none"
                       style={inputStyle}
@@ -63,7 +64,7 @@ export default function Contact() {
                       Company / Organization
                     </label>
                     <input
-                      value={form.company}
+                      aria-label="Company / Organization" value={form.company}
                       onChange={update("company")}
                       className="border px-3.5 py-2.5 text-sm outline-none"
                       style={inputStyle}
@@ -76,7 +77,7 @@ export default function Contact() {
                   <input
                     required
                     type="email"
-                    value={form.email}
+                    aria-label="Email" value={form.email}
                     onChange={update("email")}
                     className="border px-3.5 py-2.5 text-sm outline-none"
                     style={inputStyle}
@@ -89,7 +90,7 @@ export default function Contact() {
                       Project type
                     </label>
                     <select
-                      value={form.projectType}
+                      aria-label="Project type" value={form.projectType}
                       onChange={update("projectType")}
                       className="border px-3.5 py-2.5 text-sm outline-none"
                       style={inputStyle}
@@ -104,7 +105,7 @@ export default function Contact() {
                       Budget range
                     </label>
                     <select
-                      value={form.budget}
+                      aria-label="Budget range" value={form.budget}
                       onChange={update("budget")}
                       className="border px-3.5 py-2.5 text-sm outline-none"
                       style={inputStyle}
@@ -123,7 +124,7 @@ export default function Contact() {
                   <textarea
                     required
                     rows={5}
-                    value={form.description}
+                    aria-label="Project description" value={form.description}
                     onChange={update("description")}
                     className="border px-3.5 py-2.5 text-sm outline-none resize-none"
                     style={inputStyle}
@@ -135,9 +136,9 @@ export default function Contact() {
                   className="self-start px-6 py-3 text-sm font-medium mt-2"
                   style={{ background: "var(--color-oxblood)", color: "var(--color-paper)" }}
                 >
-                  Send inquiry
+                  Prepare email inquiry
                 </button>
-              </form>
+              <button type="button" className="block underline text-sm mt-4" onClick={async()=>{const text=Object.entries(form).map(([key,value])=>`${key}: ${value}`).join('\n');try{await navigator.clipboard.writeText(text);setCopyStatus('Inquiry copied. Paste it into your email or WhatsApp.');}catch{setCopyStatus('Select and copy the details below.');}}}>Copy inquiry details</button><p role="status" className="text-sm mt-3">{copyStatus}</p>{copyStatus&&<textarea aria-label="Inquiry details to copy" readOnly rows={7} value={Object.entries(form).map(([key,value])=>`${key}: ${value}`).join('\n')} className="w-full border p-3 mt-2" />}</form>
             </Reveal>
           </div>
 
@@ -198,18 +199,13 @@ export default function Contact() {
                   <h3 className="text-xs uppercase tracking-wide mb-3" style={{ color: "var(--color-mist-dim)" }}>
                     Resume
                   </h3>
-                  <button
-                    onClick={() => setCvNotice(true)}
+                  <a
+                    href="/theophilus-mensah-profile.txt" download
                     className="inline-flex items-center gap-2 text-sm px-5 py-2.5 border w-fit"
                     style={{ borderColor: "var(--color-line)", color: "var(--color-paper)" }}
                   >
-                    <FileDown size={16} /> Download CV
-                  </button>
-                  {cvNotice && (
-                    <p className="text-xs mt-2 max-w-xs" style={{ color: "var(--color-mist-dim)" }}>
-                      CV isn't uploaded yet reach out directly and I'll send it over.
-                    </p>
-                  )}
+                    <FileDown size={16} /> Download professional profile
+                  </a>
                 </div>
               </div>
             </Reveal>

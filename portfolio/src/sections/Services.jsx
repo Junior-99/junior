@@ -41,6 +41,7 @@ export default function Services() {
                 {pricingGroups.map((group) => (
                   <button
                     key={group.id}
+                    aria-pressed={activeId === group.id}
                     onClick={() => setActiveId(group.id)}
                     className="px-4 py-2 text-sm border transition-colors"
                     style={{

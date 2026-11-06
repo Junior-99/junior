@@ -1,8 +1,10 @@
+import useDialog from "./useDialog";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Code2 } from "lucide-react";
-import ProjectPlaceholder from "./ProjectPlaceholder";
+
 
 export default function ProjectModal({ project, onClose }) {
+  const dialog = useDialog(Boolean(project), onClose);
   return (
     <AnimatePresence>
       {project && (
@@ -22,7 +24,7 @@ export default function ProjectModal({ project, onClose }) {
           />
 
           <motion.div
-            className="relative w-full md:max-w-3xl my-0 md:my-auto"
+            ref={dialog} role="dialog" aria-modal="true" aria-label={project.name} className="relative w-full md:max-w-3xl my-0 md:my-auto"
             style={{ background: "var(--color-ink-2)", border: "1px solid var(--color-line)" }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +41,7 @@ export default function ProjectModal({ project, onClose }) {
             </button>
 
             <div className="aspect-[16/9] w-full">
-              <ProjectPlaceholder name={project.name} />
+              <img src={project.images[0]} alt={project.imageNote || project.name} loading="lazy" className="h-full w-full object-contain" style={{ background: "#eee8dc" }} />
             </div>
 
             <div className="p-6 md:p-10">
@@ -127,12 +129,7 @@ export default function ProjectModal({ project, onClose }) {
                     <ExternalLink size={15} /> Visit
                   </a>
                 ) : (
-                  <span
-                    className="inline-flex items-center gap-2 text-sm px-5 py-2.5 border opacity-60 cursor-default"
-                    style={{ borderColor: "var(--color-line)", color: "var(--color-mist-dim)" }}
-                  >
-                    <ExternalLink size={15} /> Link coming soon
-                  </span>
+                  <a href={`mailto:mtheophilus565@gmail.com?subject=${encodeURIComponent(project.name + ' walkthrough')}`} className="underline">Request a walkthrough</a>
                 )}
                 {project.links.github && (
                   <a

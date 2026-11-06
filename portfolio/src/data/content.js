@@ -14,9 +14,9 @@ export const profile = {
     "Technology Entrepreneur",
   ],
   location: "Ghana", // TODO: confirm city if you'd like it displayed
-  headline: "I build software, products and ideas that solve real problems.",
+  headline: "A marketplace. A community. Software built around people.",
   subheadline:
-    "Full-stack developer and founder turning early ideas into working products from marketplace platforms to the systems that run underneath them.",
+    "I am Theophilus Mensah, a software engineer in Ghana and founder of Argus Platforms Limited. I build web and mobile products, including FlipMall and NerdSpace.",
 };
 
 // TODO: add a real email address the contact form and mailto links use this.
@@ -24,13 +24,16 @@ export const CONTACT_EMAIL = "mtheophilus565@gmail.com";
 
 // TODO: add a WhatsApp number (international format, no spaces, e.g. 233XXXXXXXXX)
 // to activate the WhatsApp CTA in the contact section.
-export const WHATSAPP_NUMBER = "";
+export const WHATSAPP_NUMBER = "233598048561";
 
 export const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/theophilus-mensah-857519208/", key: "linkedin" },
   { label: "GitHub", href: "https://github.com/Junior-99", key: "github" },
   { label: "Instagram", href: "https://www.instagram.com/juniorsworld_0/?hl=en", key: "instagram" },
   { label: "TikTok", href: "https://www.tiktok.com/@juniorsworld_0?lang=en-GB", key: "tiktok" },
+  {"label": "YouTube", "href": "https://www.youtube.com/@juniorsworld_0", "key": "youtube"},
+  {"label": "Twitch", "href": "https://www.twitch.tv/juniorthenerdking", "key": "twitch"},
+  {"label": "X", "href": "https://x.com/Theo_MJ_", "key": "x"},
 ];
 
 export const nav = [
@@ -45,11 +48,11 @@ export const nav = [
 
 export const about = {
   intro:
-    "I'm a software engineer who builds full products, not just features. My work sits at the intersection of engineering and entrepreneurship: writing the code, shaping the product decisions, and building the company around it.",
+    "I work across the interface and the systems behind it. My projects include a student marketplace, a fandom community app and business websites with practical enquiry flows.",
   paragraphs: [
-    "My core discipline is full-stack development building web and mobile applications end to end, from interface down to data. I'm equally comfortable designing a system's architecture as I am polishing the interaction a user touches first.",
-    "Beyond the codebase, I think about products as businesses. I founded Argus Platforms Limited to build digital products and software platforms with real users behind them, and I built FlipMall to test that thinking directly a marketplace shaped around a specific community's actual buying and selling habits.",
-    "I also write, develop concepts, and work in film and performance. None of that competes with the engineering it feeds it. Building a product and building a story require the same instinct: understand what an audience actually needs, then construct something that delivers it clearly.",
+    "My core discipline is full-stack development. I build web and mobile applications from interface to data. I'm equally comfortable designing a system's architecture as I am polishing the interaction a user touches first.",
+    "Beyond the codebase, I think about products as businesses. I founded Argus Platforms Limited to build digital products and software platforms with real users behind them, and I built FlipMall to test that thinking directly: a marketplace shaped around a specific community's actual buying and selling habits.",
+    "I also write, develop concepts, and work in film and performance. Those creative disciplines inform how I structure an experience. Building a product and building a story require the same instinct: understand what an audience actually needs, then construct something that delivers it clearly.",
   ],
   pillars: [
     {
@@ -95,53 +98,62 @@ export const skillGroups = [
 // is shown instead of a broken image.
 export const projects = [
   {
-    slug: "flipmall",
-    name: "FlipMall",
-    tag: "Featured Product",
-    year: "", // TODO: add year/status if you'd like it shown
-    summary:
-      "A student-focused marketplace for buying, selling and discovering affordable products within a local community.",
-    problem:
-      "Students routinely buy and sell within their own communities pre-owned items, small business goods, everyday essentials but that activity is scattered across chats, flyers and word of mouth, with no shared, trustworthy place to do it.",
-    story:
-      "FlipMall is built around a student-based ecosystem: a marketplace where students can buy, sell pre-owned items, sell products from their own small businesses, and discover affordable options nearby. The goal is a local marketplace that reflects how students actually trade with each other, rather than a generic e-commerce template.",
-    features: [
-      "Buy and sell within a student community",
-      "Support for pre-owned and secondhand items",
-      "A storefront path for students running small businesses",
-      "Discovery built around affordability and locality",
+    "slug": "flipmall",
+    "name": "FlipMall",
+    "tag": "Featured product / Marketplace",
+    "year": "",
+    "summary": "A marketplace shaped around how students discover products, run small stores and talk to local sellers.",
+    "problem": "Campus trading is scattered across group chats and word of mouth. Buyers need a place to discover goods and connect with sellers.",
+    "story": "I designed and developed a marketplace with mobile apps and a companion website. The experience connects product discovery, seller stores and conversations in one flow.",
+    "features": [
+      "Product discovery and listings",
+      "Seller storefronts",
+      "Buyer and seller conversations",
+      "Mobile apps and companion website"
     ],
-    tech: ["React", "Expo", "React Native", "Firebase"], // TODO: confirm exact stack used
-    links: {
-      live: "", // TODO: add live link if available
-      github: "", // TODO: add repo link if available
+    "tech": [
+      "React Native",
+      "Expo",
+      "React",
+      "Firebase"
+    ],
+    "links": {
+      "live": "https://flipmall.store",
+      "github": ""
     },
-    images: [], // TODO: add screenshots to src/assets/projects/flipmall/
+    "images": [
+      "/projects/flipmall-discover.png"
+    ],
+    "imageNote": "FlipMall product capture"
   },
   {
-    slug: "argus",
-    name: "Argus Platforms Limited",
-    tag: "Company Founder & CEO",
-    year: "",
-    summary:
-      "The technology company I founded building digital products, software platforms, mobile applications and AI solutions.",
-    problem:
-      "Argus exists to build ambitious technology products from the ground up, with a particular focus on contributing to technological advancement through African innovation and young technology talent.",
-    story:
-      "As Founder and CEO, I lead Argus's work across digital products, software platforms, mobile applications, websites, and AI solutions. It's the vehicle for the products I build beyond individual freelance work including FlipMall and the standard set of services offered below.",
-    features: [
-      "Websites and web applications",
-      "Mobile applications",
-      "E-commerce and marketplace platforms",
-      "AI solutions and workflow automation",
+    "slug": "nerdspace",
+    "name": "NerdSpace",
+    "tag": "Featured product / Community",
+    "year": "Store release preparation",
+    "summary": "A social home for people who want to talk about the stories, games and worlds they love.",
+    "problem": "Shared interests often become scattered conversations. NerdSpace brings communities and their discussions into a dedicated social experience.",
+    "story": "I am building the mobile experience, community rooms, profiles, messaging and supporting web presence. The work includes moderation, account controls and annual membership infrastructure. Store release preparation and final device checks are ongoing.",
+    "features": [
+      "Interest-based community rooms",
+      "Profiles, posts and conversations",
+      "Moderation and account controls",
+      "Public support and membership website"
     ],
-    tech: ["React", "Tailwind CSS", "Django", "Python"],
-    links: {
-      live: "", // TODO: add Argus website link when available
-      github: "",
+    "tech": [
+      "React Native",
+      "Expo",
+      "Firebase"
+    ],
+    "links": {
+      "live": "https://junior-99.github.io/nerdspace-site/",
+      "github": "https://github.com/Junior-99/nerdspace-site"
     },
-    images: [],
-  },
+    "images": [
+      "/projects/nerdspace.png"
+    ],
+    "imageNote": "Original NerdSpace room illustration, not an app screenshot"
+  }
 ];
 
 export const pricingNote =
@@ -152,22 +164,22 @@ export const pricingGroups = [
     id: "websites",
     title: "Websites",
     tiers: [
-      { name: "Landing Page", standard: "$300 – $500", launch: "$250 – $400" },
-      { name: "Personal Website", standard: "$350 – $600", launch: "$300 – $500" },
-      { name: "Portfolio Website", standard: "$400 – $650", launch: "$350 – $600" },
-      { name: "Small Business Website", standard: "$500 – $850", launch: "$400 – $700" },
-      { name: "Corporate Website", standard: "$750 – $1,650", launch: "$650 – $1,400" },
-      { name: "School / Institution Website", standard: "$650 – $1,650", launch: "$600 – $1,400" },
-      { name: "NGO Website", standard: "$600 – $1,400", launch: "$500 – $1,150" },
+      { name: "Landing Page", standard: "$300 to $500", launch: "$250 to $400" },
+      { name: "Personal Website", standard: "$350 to $600", launch: "$300 to $500" },
+      { name: "Portfolio Website", standard: "$400 to $650", launch: "$350 to $600" },
+      { name: "Small Business Website", standard: "$500 to $850", launch: "$400 to $700" },
+      { name: "Corporate Website", standard: "$750 to $1,650", launch: "$650 to $1,400" },
+      { name: "School / Institution Website", standard: "$650 to $1,650", launch: "$600 to $1,400" },
+      { name: "NGO Website", standard: "$600 to $1,400", launch: "$500 to $1,150" },
     ],
   },
   {
     id: "e-commerce",
     title: "E-Commerce",
     tiers: [
-      { name: "Small Online Store", standard: "$600 – $1,100", launch: "$400 – $900" },
-      { name: "Professional E-Commerce", standard: "$900 – $1,800", launch: "$750 – $1,400" },
-      { name: "Advanced E-Commerce Platform", standard: "$1,400 – $2,700+", launch: "$900 – $2,700+" },
+      { name: "Small Online Store", standard: "$600 to $1,100", launch: "$400 to $900" },
+      { name: "Professional E-Commerce", standard: "$900 to $1,800", launch: "$750 to $1,400" },
+      { name: "Advanced E-Commerce Platform", standard: "$1,400 to $2,700+", launch: "$900 to $2,700+" },
       { name: "Multi-vendor Marketplace", standard: "$1,800+", launch: "Custom Quote" },
     ],
   },
@@ -175,9 +187,9 @@ export const pricingGroups = [
     id: "mobile-apps",
     title: "Mobile Applications",
     tiers: [
-      { name: "Simple Mobile App", standard: "$750 – $1,400", launch: "$650 – $1,200" },
-      { name: "Business App", standard: "$1,400 – $2,700", launch: "$1,200 – $2,300" },
-      { name: "Marketplace App", standard: "$2,700 – $6,300", launch: "$2,300 – $5,400" },
+      { name: "Simple Mobile App", standard: "$750 to $1,400", launch: "$650 to $1,200" },
+      { name: "Business App", standard: "$1,400 to $2,700", launch: "$1,200 to $2,300" },
+      { name: "Marketplace App", standard: "$2,700 to $6,300", launch: "$2,300 to $5,400" },
       { name: "Complex Platform", standard: "$4,500+", launch: "Custom Quote" },
     ],
   },
@@ -185,9 +197,9 @@ export const pricingGroups = [
     id: "web-applications",
     title: "Web Applications",
     tiers: [
-      { name: "Simple Web App", standard: "$750 – $1,400", launch: "$600 – $1,100" },
-      { name: "Business Management System", standard: "$1,400 – $2,700", launch: "$1,200 – $2,300" },
-      { name: "SaaS Platform", standard: "$2,700 – $6,300+", launch: "$2,300 – $5,400" },
+      { name: "Simple Web App", standard: "$750 to $1,400", launch: "$600 to $1,100" },
+      { name: "Business Management System", standard: "$1,400 to $2,700", launch: "$1,200 to $2,300" },
+      { name: "SaaS Platform", standard: "$2,700 to $6,300+", launch: "$2,300 to $5,400" },
       { name: "Custom Platform", standard: "$4,500+", launch: "Custom Quote" },
     ],
   },
@@ -195,8 +207,8 @@ export const pricingGroups = [
     id: "analytics",
     title: "Analytics & Dashboards",
     tiers: [
-      { name: "Basic Dashboard", standard: "$600 – $1,100", launch: "$500 – $900" },
-      { name: "Business Analytics System", standard: "$1,400 – $3,200", launch: "$1,100 – $2,700" },
+      { name: "Basic Dashboard", standard: "$600 to $1,100", launch: "$500 to $900" },
+      { name: "Business Analytics System", standard: "$1,400 to $3,200", launch: "$1,100 to $2,700" },
       { name: "Advanced Analytics Platform", standard: "$3,200+", launch: "Custom Quote" },
     ],
   },
@@ -204,9 +216,9 @@ export const pricingGroups = [
     id: "ai-solutions",
     title: "AI Solutions",
     tiers: [
-      { name: "Website AI Chatbot", standard: "$750 – $1,650", launch: "$650 – $1,400" },
-      { name: "AI Business Assistant", standard: "$1,400 – $3,600", launch: "$1,100 – $3,200" },
-      { name: "Workflow Automation", standard: "$1,400 – $4,500", launch: "$1,100 – $3,800" },
+      { name: "Website AI Chatbot", standard: "$750 to $1,650", launch: "$650 to $1,400" },
+      { name: "AI Business Assistant", standard: "$1,400 to $3,600", launch: "$1,100 to $3,200" },
+      { name: "Workflow Automation", standard: "$1,400 to $4,500", launch: "$1,100 to $3,800" },
       { name: "Custom AI Platform", standard: "$2,700+", launch: "Custom Quote" },
     ],
   },
@@ -215,23 +227,20 @@ export const pricingGroups = [
 // Optional "ideas lab" entries safe to leave empty/short and grow over time.
 export const ideas = [
   {
-    title: "Building in public, as a student founder",
-    kind: "Essay / Note",
-    description:
-      "Notes on building FlipMall alongside a full course load what changes about product decisions when your users are the people sitting next to you in class.",
+    "title": "A marketplace is a connected journey",
+    "kind": "FlipMall / Product note",
+    "description": "A product listing is only one step. Discovery needs to connect to the seller store and then to a useful conversation. I treat those transitions as part of the same experience when working on FlipMall."
   },
   {
-    title: "Where film and software actually overlap",
-    kind: "Concept",
-    description:
-      "A running set of thoughts on structure how pacing a scene and pacing a user flow draw on the same underlying instinct for what an audience needs next.",
+    "title": "Community needs clear boundaries",
+    "kind": "NerdSpace / Engineering note",
+    "description": "Rooms, profiles and messaging bring different expectations about visibility and access. NerdSpace has pushed me to treat permissions, moderation and account controls as part of the product experience."
   },
   {
-    title: "Africa-built, globally useful",
-    kind: "Thesis",
-    description:
-      "The working premise behind Argus: technology products built by and for African talent don't need to be scaled down to be taken seriously they need to be built well.",
-  },
+    "title": "Give a visitor a useful next step",
+    "kind": "Website concepts / Design note",
+    "description": "The ten independent website concepts each center a concrete task: a room-fit brief, a meal plan, a commission request or a visit plan. A distinct visual direction works best when it also helps someone decide what to do next."
+  }
 ];
 
 // Add real milestones as they happen dates/companies are only included
@@ -251,16 +260,21 @@ export const journey = [
   },
   {
     period: "Ongoing",
+    title: "Building NerdSpace",
+    description: "Developing a community app and its public web presence, with mobile store release preparation underway.",
+  },
+  {
+    period: "Ongoing",
     title: "Full-Stack Development",
     description:
-      "Working across React, React Native, Firebase, Django and Python to ship complete products frontend to backend.",
+      "Working across React, React Native, Firebase, Django and Python to ship complete products from frontend to backend.",
   },
   // TODO: add earlier milestones (education, first project, earlier roles) with real dates.
 ];
 
 export const services = {
   intro:
-    "I work with founders, businesses and teams who need software built properly websites, applications, e-commerce, dashboards and AI-driven tools.",
+    "I work with founders, businesses and teams who need software built properly: websites, applications, e-commerce, dashboards and AI-driven tools.",
   types: [
     "Website development",
     "Web applications",
@@ -272,9 +286,9 @@ export const services = {
   ],
   budgetRanges: [
     "Under $500",
-    "$500 – $1,500",
-    "$1,500 – $3,000",
-    "$3,000 – $6,000",
+    "$500 to $1,500",
+    "$1,500 to $3,000",
+    "$3,000 to $6,000",
     "$6,000+",
   ],
 };

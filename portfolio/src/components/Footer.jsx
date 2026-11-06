@@ -57,7 +57,7 @@ export default function Footer() {
         style={{ borderTop: "1px solid var(--color-line)", color: "var(--color-mist-dim)" }}
       >
         <span>© {year} {profile.name}. All rights reserved.</span>
-        <span>Built end to end by hand.</span>
+        <span>Designed and developed by Theophilus Mensah.</span>
       </div>
     </footer>
   );

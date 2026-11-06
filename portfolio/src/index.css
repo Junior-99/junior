@@ -116,3 +116,19 @@ body {
     padding-inline: 3rem;
   }
 }
+
+/* Keyboard access and motion preferences apply to every route. */
+:focus-visible { outline: 2px solid #b78c45; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
+}
+img { max-width: 100%; }
+
+body, a, button { cursor: auto; }
+a, button { cursor: pointer; }
+
+textarea[readonly] { background: var(--color-ink-2); color: var(--color-paper); }
+
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 999; padding: 12px 18px; background: #fff; color: #111; }
+.skip-link:focus { top: 12px; }

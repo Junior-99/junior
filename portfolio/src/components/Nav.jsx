@@ -10,7 +10,7 @@ export default function Nav() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -27,6 +27,12 @@ export default function Nav() {
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const close = (event) => { if (event.key === 'Escape') setOpen(false); };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
   }, []);
 
   return (
@@ -72,7 +78,7 @@ export default function Nav() {
 
         <button
           className="md:hidden p-2"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
           {open ? (
@@ -85,7 +91,7 @@ export default function Nav() {
 
       {open && (
         <div
-          className="md:hidden border-t"
+          id="mobile-navigation" className="md:hidden border-t"
           style={{ background: "var(--color-ink)", borderColor: "var(--color-line)" }}
         >
           <div className="container-xl py-6 flex flex-col gap-5">
