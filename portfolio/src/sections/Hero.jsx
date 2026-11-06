@@ -71,6 +71,7 @@ export default function Hero() {
             >
               Work with me
             </a>
+            <a href="/theophilus-mensah-cv.pdf" download className="text-sm underline underline-offset-4" style={{color: "var(--color-mist)"}}>Download CV (PDF)</a>
           </motion.div>
 
           <motion.div

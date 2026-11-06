@@ -1,1 +1,1 @@
-{"rewrites":[{"source":"/((?!assets/|projects/|favicon|theophilus-mensah-profile.txt).*)","destination":"/index.html"}]}
+{"rewrites":[{"source":"/((?!assets/|projects/|favicon|theophilus-mensah-cv.pdf|theophilus-mensah-profile.txt).*)","destination":"/index.html"}]}

@@ -200,11 +200,11 @@ export default function Contact() {
                     Resume
                   </h3>
                   <a
-                    href="/theophilus-mensah-profile.txt" download
+                    href="/theophilus-mensah-cv.pdf" download
                     className="inline-flex items-center gap-2 text-sm px-5 py-2.5 border w-fit"
                     style={{ borderColor: "var(--color-line)", color: "var(--color-paper)" }}
                   >
-                    <FileDown size={16} /> Download professional profile
+                    <FileDown size={16} /> Download CV (PDF)
                   </a>
                 </div>
               </div>

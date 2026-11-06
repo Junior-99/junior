@@ -7,3 +7,5 @@
 `public/projects/nerdspace.png`: existing original NerdSpace observatory artwork from https://raw.githubusercontent.com/Junior-99/nerdspace-site/main/assets/nerdspace-observatory.png . Illustration, not an app screenshot.
 
 The connected-worlds artwork was generated with the built-in imagegen tool, then copied unchanged into each website workspace. The original remains in the generated-images directory.
+
+Project archive previews: real homepage captures of the ten linked independent website concepts and the Argus company site, converted to WebP for the gallery. Campus Buddy and EasyPay previews are existing interface design studies from the owner's local projects, labelled as design studies with sample data rather than live product screenshots.
